@@ -1,0 +1,17 @@
+Copyright (c) 2026 Levushka
+
+All rights reserved.
+
+The Levushka VPN desktop application binaries, branding, and service
+infrastructure are proprietary unless explicitly stated otherwise.
+
+Documentation, screenshots, and metadata in this public repository are
+provided for transparency and user support. You may link to and quote
+this documentation with attribution to Levushka VPN.
+
+This repository does not grant a license to use the Levushka trademark,
+subscription service, or distributed application binaries except as
+provided by your subscription terms at https://levushka.app.
+
+For open-source components used inside the client (e.g. Tauri, Xray-core),
+see the respective upstream licenses.

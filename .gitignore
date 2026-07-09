@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+
+# Local drafts — do not commit secrets
+secrets/
+*.key
+*.pem
