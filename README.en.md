@@ -1,4 +1,4 @@
-# Levushka VPN — Desktop Client
+# Levushka VPN — Client
 
 <p align="center">
   <a href="README.md">Overview</a> ·
@@ -6,16 +6,17 @@
   <strong>English</strong>
 </p>
 
-**Levushka VPN** is a native desktop client for the [Levushka VPN](https://levushka.app) service. It uses a full-system **TUN tunnel**, not just a browser proxy, so Telegram, games, and other apps that ignore system proxy settings work correctly.
+**Levushka VPN** is a native client for the [Levushka VPN](https://levushka.app) service on **macOS**, **Windows**, and **Android**. It uses a full-system **TUN tunnel**, not just a browser proxy, so Telegram, games, and other apps that ignore system proxy settings work correctly.
 
 ## Download
 
-| Platform | Link |
-|----------|------|
-| macOS (Apple Silicon) | [app.levushka.app/desktop/macos](https://app.levushka.app/desktop/macos/) |
-| Windows 10/11 x64 | [app.levushka.app/desktop/windows](https://app.levushka.app/desktop/windows/) |
+| Platform | Version | Link |
+|----------|---------|------|
+| macOS (Apple Silicon) | 0.3.5 | [app.levushka.app/desktop/macos](https://app.levushka.app/desktop/macos/) |
+| Windows 10/11 x64 | 0.3.5 | [app.levushka.app/desktop/windows](https://app.levushka.app/desktop/windows/) |
+| Android 8+ (APK) | 0.4.0 | [app.levushka.app/desktop/android](https://app.levushka.app/desktop/android/) |
 
-Subscription & account: [my.levushka.app](https://my.levushka.app)
+All platforms: [app.levushka.app](https://app.levushka.app) · Subscription & account: [my.levushka.app](https://my.levushka.app)
 
 ## Features
 
@@ -33,9 +34,10 @@ Subscription & account: [my.levushka.app](https://my.levushka.app)
 
 - **Full TUN tunnel** — system-wide traffic through VPN (with configurable exceptions)
 - **VLESS** via [Xray-core](https://github.com/XTLS/Xray-core)
+- On Android: **VpnService** + xray + hev-socks5-tunnel (same UX as macOS)
 - Server list with **TCP ping**
 - One-click connect / disconnect
-- Tray icon, session timer, auto-connect on launch
+- Tray icon, session timer, auto-connect on launch (desktop)
 
 ### Routing
 
@@ -71,15 +73,15 @@ Presets are fetched from the server and update without reinstalling the app:
 3. Paste the link on the import screen (or open a `levushka://` link).
 4. Pick a server and tap **Connect**.
 
-On first connect, macOS or Windows will ask for administrator approval to install the network helper and TUN routes. This is a one-time step.
+On first connect, macOS or Windows will ask for administrator approval to install the network helper and TUN routes. Android asks for VPN permission. This is a one-time step.
 
 ## Requirements
 
-| | macOS | Windows |
-|---|--------|---------|
-| OS | macOS 12+ (Apple Silicon recommended) | Windows 10/11 x64 |
-| Privileges | Admin on first connect | UAC on first connect |
-| Network | Internet for subscription & geo assets | Same |
+| | macOS | Windows | Android |
+|---|--------|---------|---------|
+| OS | macOS 12+ (Apple Silicon recommended) | Windows 10/11 x64 | Android 8+ (API 24+) |
+| Privileges | Admin on first connect | UAC on first connect | VPN permission |
+| Network | Internet for subscription & geo assets | Same | Same |
 
 ## Architecture (overview)
 

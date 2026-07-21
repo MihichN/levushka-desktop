@@ -6,7 +6,7 @@ This guide is for maintainers deciding how much of Levushka VPN Desktop to expos
 
 ### 1. Showcase only (recommended to start)
 
-**Public:** README, screenshots, changelog, issue tracker, [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github) with `.dmg` / `.exe` attachments or links to `app.levushka.app`.
+**Public:** README, screenshots, changelog, issue tracker, [GitHub Releases](https://docs.github.com/en/repositories/releasing-projects-on-github) with `.dmg` / `.exe` / `.apk` attachments or links to `app.levushka.app`.
 
 **Private:** Full source, signing keys, `scripts/signing/`, release automation, subscription backend.
 
@@ -88,9 +88,12 @@ The private dev repo (`levushka-desktop`) stays where you build and sign release
 
 ## Releases workflow (showcase)
 
-1. Build signed/notarized installers in the private repo.
-2. Upload to `app.levushka.app` (primary CDN).
-3. Create a GitHub Release tag `v0.3.5` with:
+1. Build signed/notarized installers (and Android APK) in the private repo.
+2. Upload to `app.levushka.app` (primary CDN):
+   - macOS → `desktop/macos/`
+   - Windows → `desktop/windows/`
+   - Android → `desktop/android/`
+3. Create a GitHub Release tag (e.g. `v0.4.0`) with:
    - Notes from `CHANGELOG.md`
    - Attachments **or** links to CDN (attachments have size limits).
 

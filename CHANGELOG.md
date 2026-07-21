@@ -1,8 +1,19 @@
 # Changelog
 
-All notable user-facing changes to Levushka VPN Desktop.
+All notable user-facing changes to Levushka VPN.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
+
+## [0.4.0] — 2026-07-21
+
+### Added
+- **Android** client (APK): VpnService + xray + hev-socks5-tunnel, same UI as desktop
+- Full-tunnel VPN on Android 8+ with subscription import (`levushka://`) and in-app updates
+
+### Download
+- [macOS 0.3.5](https://app.levushka.app/desktop/macos/)
+- [Windows 0.3.5](https://app.levushka.app/desktop/windows/)
+- [Android 0.4.0](https://app.levushka.app/desktop/android/)
 
 ## [0.3.5] — 2026-07-08
 
@@ -28,5 +39,6 @@ Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 Internal beta releases before 0.3.3 focused on subscription import, VLESS connect, routing presets, tray UI, and auto-updates.
 
+[0.4.0]: https://github.com/MihichN/levushka-desktop/releases/tag/v0.4.0
 [0.3.5]: https://github.com/MihichN/levushka-desktop/releases/tag/v0.3.5
 [0.3.3]: https://github.com/MihichN/levushka-desktop/releases/tag/v0.3.3

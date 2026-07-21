@@ -1,4 +1,4 @@
-# Levushka VPN — десктопное приложение
+# Levushka VPN — приложение
 
 <p align="center">
   <a href="README.md">Overview</a> ·
@@ -6,16 +6,17 @@
   <a href="README.en.md">English</a>
 </p>
 
-**Levushka VPN** — нативное десктоп-приложение для сервиса [Levushka VPN](https://levushka.app). Подключается через полноценный **TUN-туннель** на уровне системы, а не только через прокси браузера. Поэтому работают Telegram, игры и другие программы, которые не используют системный прокси.
+**Levushka VPN** — нативное приложение для сервиса [Levushka VPN](https://levushka.app) на **macOS**, **Windows** и **Android**. Подключается через полноценный **TUN-туннель** на уровне системы, а не только через прокси браузера. Поэтому работают Telegram, игры и другие программы, которые не используют системный прокси.
 
 ## Скачать
 
-| Платформа | Ссылка |
-|-----------|--------|
-| macOS (Apple Silicon) | [app.levushka.app/desktop/macos](https://app.levushka.app/desktop/macos/) |
-| Windows 10/11 x64 | [app.levushka.app/desktop/windows](https://app.levushka.app/desktop/windows/) |
+| Платформа | Версия | Ссылка |
+|-----------|--------|--------|
+| macOS (Apple Silicon) | 0.3.5 | [app.levushka.app/desktop/macos](https://app.levushka.app/desktop/macos/) |
+| Windows 10/11 x64 | 0.3.5 | [app.levushka.app/desktop/windows](https://app.levushka.app/desktop/windows/) |
+| Android 8+ (APK) | 0.4.0 | [app.levushka.app/desktop/android](https://app.levushka.app/desktop/android/) |
 
-Личный кабинет и подписка: [my.levushka.app](https://my.levushka.app)
+Все платформы: [app.levushka.app](https://app.levushka.app) · Личный кабинет: [my.levushka.app](https://my.levushka.app)
 
 ## Возможности
 
@@ -33,9 +34,10 @@
 
 - **Полный туннель TUN** — весь трафик системы через VPN (с настраиваемыми исключениями)
 - Протокол **VLESS** через [Xray-core](https://github.com/XTLS/Xray-core)
+- На Android: **VpnService** + xray + hev-socks5-tunnel (тот же UX, что на macOS)
 - Список серверов с **TCP-пингом**
 - Подключение / отключение в один клик
-- Иконка в трее, таймер сессии, автоподключение при запуске
+- Иконка в трее, таймер сессии, автоподключение при запуске (десктоп)
 
 ### Маршрутизация
 
@@ -71,15 +73,15 @@
 3. Вставьте ссылку на экране импорта (или откройте `levushka://` ссылку).
 4. Выберите сервер и нажмите **Подключить**.
 
-При первом подключении macOS или Windows запросят права администратора — это нужно для установки сетевого helper и маршрутов TUN. Пароль запрашивается один раз.
+При первом подключении macOS или Windows запросят права администратора — это нужно для установки сетевого helper и маршрутов TUN. На Android система запросит разрешение VPN. Пароль / согласие запрашивается один раз.
 
 ## Системные требования
 
-| | macOS | Windows |
-|---|--------|---------|
-| Версия ОС | macOS 12+ (рекомендуется Apple Silicon) | Windows 10/11 x64 |
-| Права | Администратор при первом подключении | UAC при первом подключении |
-| Сеть | Интернет для загрузки подписки и geo-баз | То же |
+| | macOS | Windows | Android |
+|---|--------|---------|---------|
+| Версия ОС | macOS 12+ (рекомендуется Apple Silicon) | Windows 10/11 x64 | Android 8+ (API 24+) |
+| Права | Администратор при первом подключении | UAC при первом подключении | Разрешение VPN |
+| Сеть | Интернет для загрузки подписки и geo-баз | То же | То же |
 
 ## Архитектура (кратко)
 
